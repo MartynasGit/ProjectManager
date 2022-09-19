@@ -2,33 +2,22 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "airport_list";
-
+$dbname = "project_manager";
 $conn = mysqli_connect($servername, $username, $password, $dbname); // Create connection
 //If connection correct message
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-// echo "Connected successfully <br>";
+if (!$conn) die("Connection failed: " . mysqli_connect_error());
 
-$sql = "SELECT id, person, update_date FROM people";
+$sql = "SELECT employees.id as id , name_e, project_name FROM employees
+LEFT JOIN projects ON employees.project_id = projects.id;";
 $result = mysqli_query($conn, $sql);
-
-// if (mysqli_num_rows($result) > 0) {
-//     while ($row = mysqli_fetch_assoc($result)) {
-//         echo "id: " . $row['id'] . " - Person: " . $row['person'] . " - Date: " . $row['update_date'] . "<br>";
-//     }
-// }
-
 mysqli_close($conn);
 ?>
-
-
 <thead>
     <tr>
         <th scope="col">Id</th>
-        <th scope="col">Name</th>
-        <th scope="col">Project date</th>
+        <th scope="col">Employee</th>
+        <th scope="col">Project</th>
+        <th scope="col">Actions</th>
     </tr>
 </thead>
 <tbody>
@@ -36,8 +25,9 @@ mysqli_close($conn);
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr> <td>" . $row['id'];
-            echo "</td> <td> " . $row['person'];
-            echo "</td> <td> " . $row['update_date'] . "</td></tr>";
+            echo "</td> <td> " . $row['name_e'];
+            echo "</td> <td> " . $row['project_name'];
+            echo "</td> <td> " . 'Delete/Update' . "</td></tr>";
         }
     }
     ?>

@@ -1,0 +1,19 @@
+*{
+  font-family: "Lato", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.container-min-height {
+  position: relative;
+  min-height: 93.5vh;
+}
+.content-wrap {
+  padding-bottom: 2.5rem;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
