@@ -16,3 +16,9 @@ redagavimas
 trynimas
 
 jų priskyrimas darbuotojams (projekte gali dirbti >1 darbuotojas).
+
+
+
+
+This aplication usses database. If you want to use this application safetly create a low privilage user.
+Minimum required "Grants" for user:
