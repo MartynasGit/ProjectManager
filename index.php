@@ -1,5 +1,6 @@
 <?php
-require_once('./src/db_connection.php')
+require_once('./src/db_connection.php');
+require_once('./src/db_modification.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +37,7 @@ require_once('./src/db_connection.php')
         <span style="width: 20%;" class="fs-2 me-2">Project Manager</span>
     </nav>
     <div class="container-min-height">
-        <div class="content-wrap container d-flex justify-content-center">
+        <div class="content-wrap container">
             <!-- Table -->
             <?php
             if (isset($_GET['path']) and  $_GET['path'] == "Employees") {   //Pasidaryti switcha

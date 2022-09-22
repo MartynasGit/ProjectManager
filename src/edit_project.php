@@ -24,10 +24,14 @@ mysqli_close($conn);
 
     <form action="/Db/?path=Projects" method="post">
         <div class="form-group">
+            <label for="id">Projects id</label>
+            <input type="number" required id="id" placeholder="New id" name="idNew" class="form-control" value="<?php echo $projects['id'] ?>">
+        </div>
+        <div class="form-group">
             <label for="name">Projects name</label>
-            <input type="text" required name="employees" id="name" placeholder="New name" class="form-control" value="<?php echo $projects['project_name'] ?>">
-            <input type="hidden" value=<?php echo $projects['id'] ?> name="id">
+            <input type="text" required name="project" id="name" placeholder="New name" class="form-control" value="<?php echo $projects['project_name'] ?>">
             <input type="hidden" name="editProject">
+            <input type="hidden" name="id" value="<?php echo $projects['id'] ?>">;
         </div>
         <div class="d-flex justify-content-end mt-2"><button type="submit" class="btn btn-primary">Submit</button></div>
     </form>

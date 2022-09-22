@@ -1,10 +1,13 @@
 <?php
-$project_Id = $_GET['id'];
-$sql = "DELETE FROM projects
-        WHERE id =" . $project_Id . ";";
-$result = mysqli_query($conn, $sql);
-mysqli_close($conn);
-
-header('Location: ' . $_SERVER['PHP_SELF'] .'?path=Projects');
-die;
+if (isset($_GET['id'])) {
+        $stmt = $conn->prepare("DELETE FROM projects WHERE id = (?);");
+        $stmt->bind_param("i", $id);
+        $id = $_GET['id'];
+        $stmt->execute();
+        $stmt->close();
+        header('Location: ' . $_SERVER['PHP_SELF'] . '?' . 'path=Projects');
+        die;
+}
 ?>
+
+
