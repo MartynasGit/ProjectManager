@@ -36,17 +36,23 @@ require_once('./src/db_connection.php')
         <span style="width: 20%;" class="fs-2 me-2">Project Manager</span>
     </nav>
     <div class="container-min-height">
-        <div class="content-wrap container">
+        <div class="content-wrap container d-flex justify-content-center">
             <!-- Table -->
-            <table class="table table-hover">
-                <?php
-                if (isset($_GET['path']) and  $_GET['path'] == "Employees") {
-                    include('./src/employees.php');
-                } else {
-                    include('./src/projects.php');
-                }
-                ?>
-            </table>
+            <?php
+            if (isset($_GET['path']) and  $_GET['path'] == "Employees") {   //Pasidaryti switcha
+                include('./src/employees.php');
+            } elseif (isset($_GET['path']) and  $_GET['path'] == "edit_employee") {
+                include('./src/edit_employee.php');
+            } elseif (isset($_GET['path']) and  $_GET['path'] == "edit_project") {
+                include('./src/edit_project.php');
+            } elseif (isset($_GET['path']) and  $_GET['path'] == "delete_emplyee") {
+                include('./src/delete_employee.php');
+            } elseif (isset($_GET['path']) and  $_GET['path'] == "delete_project") {
+                include('./src/delete_project.php');
+            } else {
+                include('./src/projects.php');
+            }
+            ?>
         </div>
         <!-- FOOTER -->
         <footer class="bg-secondary text-light text-center p-2">
