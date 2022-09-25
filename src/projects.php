@@ -18,7 +18,7 @@
                 echo '<a href="/Db/?path=delete_project&id=' . $project['id'] . '" class="btn btn-primary">' . '<i class="bi bi-trash3-fill me-1"></i></i></a></tr>';
             }
         } else {
-            echo '<p>0 results</p>';
+            echo '<h2>0 results</h2>';
         }
         ?>
     </tbody>

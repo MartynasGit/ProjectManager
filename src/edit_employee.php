@@ -1,5 +1,4 @@
 <?php
-print_r($arrayOfiD);
 $currentId = $_GET['id'];
 $sql = "SELECT name_e, project_name, employees.id as idx 
 FROM employees
@@ -17,8 +16,8 @@ if (mysqli_num_rows($resultProjectList) > 0) {
 }
 mysqli_close($conn);
 ?>
-<div class="col-4 mt-5">
-    <h3 class="text-center">Currently editing</h3>
+<div class="col-4 mx-auto">
+    <h3 class="text-center pt-3">Currently editing</h3>
     <div class="card mb-3" style="width: 27rem;">
         <ul class="list-group list-group-flush">
             <li class="list-group-item bg-light">

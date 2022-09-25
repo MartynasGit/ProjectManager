@@ -3,11 +3,11 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "project_manager";
-$arrayOfiD = [];
+// $arrayOfiD = [];  ///Test arr
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) die("Connection failed: " . mysqli_connect_error());
 
-if (isset($_GET['path']) and  $_GET['path'] == "Employees") {
+if (isset($_GET['path']) and  ($_GET['path'] == 'Employees' or $_GET['path'] == 'edit_employee')) {
     $sql = "SELECT employees.id as id , name_e, project_name
         FROM employees
         LEFT JOIN projects ON employees.project_id = projects.id;";
@@ -16,10 +16,10 @@ if (isset($_GET['path']) and  $_GET['path'] == "Employees") {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             array_push($emplyeesArray, $row);
-            array_push($arrayOfiD, $row['id']);
+            // array_push($arrayOfiD, $row['id']);  //Array of id for cheking
         }
     }
-} else{
+} else {
     $sql = "SELECT projects.id as id, project_name, group_concat(name_e separator ' ,') as employee 
         FROM projects 
         LEFT JOIN employees ON employees.project_id = projects.id
@@ -30,7 +30,7 @@ if (isset($_GET['path']) and  $_GET['path'] == "Employees") {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             array_push($projectsArray, $row);
-            array_push($arrayOfiD, $row['id']);
+            // array_push($arrayOfiD, $row['id']); //Array of id for cheking
         }
     }
 }

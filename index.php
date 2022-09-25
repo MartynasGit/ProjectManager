@@ -38,26 +38,36 @@ require_once('./src/db_modification.php');
     </nav>
     <div class="container-min-height">
         <div class="content-wrap container">
-            <!-- Table -->
+            <!-- RENDER TABLE OR DELETION -->
             <?php
-            if (isset($_GET['path']) and  $_GET['path'] == "Employees") {   //Pasidaryti switcha
-                include('./src/employees.php');
-            } elseif (isset($_GET['path']) and  $_GET['path'] == "edit_employee") {
-                include('./src/edit_employee.php');
-            } elseif (isset($_GET['path']) and  $_GET['path'] == "edit_project") {
-                include('./src/edit_project.php');
-            } elseif (isset($_GET['path']) and  $_GET['path'] == "delete_emplyee") {
-                include('./src/delete_employee.php');
-            } elseif (isset($_GET['path']) and  $_GET['path'] == "delete_project") {
-                include('./src/delete_project.php');
-            } else {
+            if (isset($_GET['path'])) {
+                switch ($_GET['path']) {
+                    case "Employees":
+                        include('./src/employees.php');
+                        break;
+                    case "edit_employee":
+                        include('./src/edit_employee.php');
+                        break;
+                    case "edit_project":
+                        include('./src/edit_project.php');
+                        break;
+                    case "delete_emplyee":
+                        include('./src/delete_project_employee.php');
+                        break;
+                    case "delete_project":
+                        include('./src/delete_project_employee.php');
+                        break;
+                    default:
+                        include('./src/projects.php');
+                }
+            } else
                 include('./src/projects.php');
-            }
+
             ?>
         </div>
         <!-- FOOTER -->
         <footer class="bg-secondary text-light text-center p-2">
-            <span> © <?php echo date("Y"); ?>
+            <span> © <?php echo date("Y") ?>
                 <a href="https://github.com/MartynasGit" target="_blank" class="text-light">MartynasGit</a>
             </span>
         </footer>
