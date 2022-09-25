@@ -1,23 +1,17 @@
-Sukurti DB shemą praktiniam projektui, apgalvojame kokios esybės (entities).
-Sukurti lenteles ir užpildyti jas duomenimis (ranka).
-Sukurti PHP scriptą, kuris iš duomenų bazės ištraukia duomenis ir atvaizduoja juos HTML lentelėje (darbuotojų ARBA projektų lentelei).
-* Atvaizduoti duomenis projektų IR darbuotojų lentelėms.
+# PROJECT MANAGMENT APPLICATION
 
+## About
 
-Sukurti personalo valdymo sistemą (CRUD app). Sistemos reikalavimai: 
-darbuotojų
-talpinimas
-redagavimas
-trynimas
-
-projektų
-talpinimas
-redagavimas
-trynimas
-
-jų priskyrimas darbuotojams (projekte gali dirbti >1 darbuotojas).
-
-
+Application is made with PHP, HTML, MySQL Workbench.
+For style used Boostrap and raw CSS.
+Website is made to manage your projects and people who works on them with CRUD operations.
+Website has PHP script to request data from RDBMS and get data back as response to render it.
+Feature:
+- Application show list of projects and employees who work on it.
+- Renders list of employees and projects employee works.
+- Ability to create, edit and delete projects.
+- Ability to create, edit and delete employees.
+- Asign employees to projects.
 
 
 This aplication usses database. If you want to use this application safetly create a low privilage user.
