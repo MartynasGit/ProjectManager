@@ -14,8 +14,8 @@
                 echo '<tr> <td>' . $employee['id'] . '</td>';
                 echo  '<td>' . $employee['name_e'] . '</td>';
                 echo '<td>' . $employee['project_name'] . '</td>';
-                echo '<td><a href="/Db/?path=edit_employee&id=' . $employee['id'] . '" class="btn btn-primary me-2">' . '<i class="bi bi-pencil-square me-1"></i></a>';
-                echo '<a href="/Db/?path=delete_emplyee&id=' . $employee['id'] . '" class="btn btn-primary">' . '<i class="bi bi-trash3-fill me-1"></i></i></a></tr>';
+                echo '<td><a href="/ProjectManagment/?path=edit_employee&id=' . $employee['id'] . '" class="btn btn-primary me-2">' . '<i class="bi bi-pencil-square me-1"></i></a>';
+                echo '<a href="/ProjectManagment/?path=delete_emplyee&id=' . $employee['id'] . '" class="btn btn-primary">' . '<i class="bi bi-trash3-fill me-1"></i></i></a></tr>';
             }
         } else {
             echo '<h2>0 results</h2>';

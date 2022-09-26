@@ -18,15 +18,14 @@ Features:
 
 For app to run we need PHP interpreter(XAMPP), MySQL Workbench.
 - Run XAMPP and start "Apache" and "MySQL"  Module.
-- Find where XAMPP is installed on your device and open "htdocs" folder.
+- Find where XAMPP is installed on your device and open "htdocs" folder. Potentialy in "C:\xampp\htdocs\DB".
 - Clone repository inside "htdocs" folder.
-- Cloned folder name must be "DB".
+- Cloned folder name must be "ProjectManagment".
 - Open "MySQL Workbench". Create connection with ussername: "root".
 - Open connection. Then open "Administration" tab and click "Data Import/Restore".
-- Select "Import from Self-Contained File" and select "dump.sql" file from cloned repository folder potentialy in "C:\xampp\htdocs\DB".
+- Select "Import from Self-Contained File" and select "dump.sql" file from cloned repository folder.
 - Press "Start Import".
 - To open page go to http//localhost/DB
-
 
 ## Demo
 
@@ -38,6 +37,3 @@ Project is created by Martynas Gumuliauskas.
 Github - MartynasGit.
 
 Linkedin - https://www.linkedin.com/in/martynasgum/.
-
-
-Patikrinti ar gera instrukcija (pilnai supushintą projektą išcheckoutinat kitame folderyje, tada išnaujo sukuriat db su savo dump failu ir tikranat funkcionalumą).
