@@ -9,7 +9,7 @@ if (isset($_POST['editProject']) && isset($_POST['project'])) {
         $name = $_POST['project'];
         $stmt->execute();
         $stmt->close();
-        header('Location: ' . $_SERVER['PHP_SELF'] . '?' . 'path=Projects');
+        header('Location: ./?path=Projects');
         die;
     } catch (EXCEPTION) {
         $_SESSION['error'] = 'edit-project';
@@ -26,7 +26,7 @@ if (isset($_POST['editEmployee']) && isset($_POST['employees'])) {
         $project = $_POST['project'];
         $stmt->execute();
         $stmt->close();
-        header('Location: ' . $_SERVER['PHP_SELF'] . '?' . 'path=Employees');
+        header('Location: ./?path=Employees');
         die;
     } catch (EXCEPTION) {
         $_SESSION['error'] = 'edit-emplyee';
@@ -40,10 +40,10 @@ if (isset($_POST['createProject'])) {
         $name = $_POST['project'];
         $stmt->execute();
         $stmt->close();
-        header('Location: ' . $_SERVER['PHP_SELF'] . '?' . 'path=Projects');
+        header('Location: ./?path=Projects');
         die;
     } catch (EXCEPTION) {
-        $_SESSION['error'] = 'createProject';
+        $_SESSION['error'] = 'create-project';
     }
 }
 // CREATE EMPLOYEE LOGIC
@@ -53,6 +53,6 @@ if (isset($_POST['createEmplyee'])) {
     $name = $_POST['employee'];
     $stmt->execute();
     $stmt->close();
-    header('Location: ' . $_SERVER['PHP_SELF'] . '?' . 'path=Employees');
+    header('Location: ./?path=Employees');
     die;
 }

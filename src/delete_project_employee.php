@@ -5,7 +5,7 @@ if (isset($_GET['id']) && $_GET['path'] == "delete_emplyee") {
         $id = $_GET['id'];
         $stmt->execute();
         $stmt->close();
-        header('Location: ' . $_SERVER['PHP_SELF'] . '?' . 'path=Employees');
+        header('Location: ./?path=Employees');
         die;
 }
 
@@ -15,6 +15,6 @@ if (isset($_GET['id']) && $_GET['path'] == "delete_project") {
         $id = $_GET['id'];
         $stmt->execute();
         $stmt->close();
-        header('Location: ' . $_SERVER['PHP_SELF'] . '?' . 'path=Projects');
+        header('Location: ./?path=Projects');
         die;
 }

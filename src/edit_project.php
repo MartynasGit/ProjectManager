@@ -5,7 +5,6 @@ $sql =
 WHERE projects.id = " . $currentId . ";";
 $result = mysqli_query($conn, $sql);
 $projects = mysqli_fetch_assoc($result);
-mysqli_close($conn);
 ?>
 <div class="col-4 mx-auto">
     <h3 class="text-center pt-3">Currently editing</h3>
@@ -22,7 +21,7 @@ mysqli_close($conn);
         </ul>
     </div>
 
-    <form action="<?php echo $_SERVER['PHP_SELF'] . '?path=Projects'?>" method="post">
+    <form action="./?path=Projects" method="post">
         <div class="form-group">
             <label for="id">Projects id</label>
             <input type="number" required id="id" placeholder="New id" name="idNew" class="form-control" value="<?php echo $projects['id'] ?>">

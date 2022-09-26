@@ -64,6 +64,7 @@ require_once('./src/errors.php');
                 }
             } else
                 include('./src/projects.php');
+            mysqli_close($conn);
             ?>
         </div>
         <!-- FOOTER -->

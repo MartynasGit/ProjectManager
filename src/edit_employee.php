@@ -14,7 +14,6 @@ if (mysqli_num_rows($resultProjectList) > 0) {
         array_push($allprojects, $row);
     }
 }
-mysqli_close($conn);
 ?>
 <div class="col-4 mx-auto">
     <h3 class="text-center pt-3">Currently editing</h3>
@@ -35,7 +34,7 @@ mysqli_close($conn);
         </ul>
     </div>
 
-    <form action="<?php echo $_SERVER['PHP_SELF'] . '?path=Employees' ?>" method="post">
+    <form action="./?path=Employees" method="post">
         <div class="form-group">
             <label for="id">Employee's id</label>
             <input type="number" required id="id" placeholder="New id" name="idNew" class="form-control" value="<?php echo $employee['idx'] ?>">
