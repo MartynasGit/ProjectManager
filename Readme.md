@@ -5,11 +5,11 @@
 Application is made with PHP, HTML, MySQL Workbench.
 For style used Boostrap and raw CSS.
 This aplication usses database.
-Website is made to manage your projects and people who works on them with CRUD operations.
+Website is made to manage your projects and employees with CRUD.
 Website has PHP script to request data from RDBMS and get data back as response to render it.
 Features:
-- Application show list of projects and employees who work on it.
-- Renders list of employees and projects employee works.
+- Application renders list of projects and witch employees currently work on it.
+- Renders list of employees and which project employee works.
 - Ability to create, edit and delete projects.
 - Ability to create, edit and delete employees.
 - Asign employees to projects.
@@ -24,8 +24,8 @@ For app to run we need PHP interpreter(XAMPP), MySQL Workbench.
 - Open "MySQL Workbench". Create connection with ussername: "root".
 - Open connection. Then open "Administration" tab and click "Data Import/Restore".
 - Select "Import from Self-Contained File" and select "dump.sql" file from cloned repository folder.
-- Press "Start Import".
-- To open page go to http//localhost/DB
+- Press "Start Import"
+- To open page go to http://localhost/ProjectManagment/
 
 ## Demo
 
