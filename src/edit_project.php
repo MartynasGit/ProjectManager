@@ -22,7 +22,7 @@ mysqli_close($conn);
         </ul>
     </div>
 
-    <form action="/Db/?path=Projects" method="post">
+    <form action="/ProjectManager/?path=Projects" method="post">
         <div class="form-group">
             <label for="id">Projects id</label>
             <input type="number" required id="id" placeholder="New id" name="idNew" class="form-control" value="<?php echo $projects['id'] ?>">

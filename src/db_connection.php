@@ -3,7 +3,6 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "project_manager";
-// $arrayOfiD = [];  ///Test arr
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) die("Connection failed: " . mysqli_connect_error());
 
@@ -16,7 +15,6 @@ if (isset($_GET['path']) and  ($_GET['path'] == 'Employees' or $_GET['path'] == 
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             array_push($emplyeesArray, $row);
-            // array_push($arrayOfiD, $row['id']);  //Array of id for cheking
         }
     }
 } else {
@@ -30,7 +28,6 @@ if (isset($_GET['path']) and  ($_GET['path'] == 'Employees' or $_GET['path'] == 
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             array_push($projectsArray, $row);
-            // array_push($arrayOfiD, $row['id']); //Array of id for cheking
         }
     }
 }

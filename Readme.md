@@ -18,14 +18,14 @@ Features:
 
 For app to run we need PHP interpreter(XAMPP), MySQL Workbench.
 - Run XAMPP and start "Apache" and "MySQL"  Module.
-- Find where XAMPP is installed on your device and open "htdocs" folder. Potentialy in "C:\xampp\htdocs\DB".
+- Find where XAMPP is installed on your device and open "htdocs" folder. Potentialy in "C:\xampp\htdocs".
 - Clone repository inside "htdocs" folder.
-- Cloned folder name must be "ProjectManagment".
+- Cloned folder name must be "ProjectManager".
 - Open "MySQL Workbench". Create connection with ussername: "root".
 - Open connection. Then open "Administration" tab and click "Data Import/Restore".
 - Select "Import from Self-Contained File" and select "dump.sql" file from cloned repository folder.
 - Press "Start Import"
-- To open page go to http://localhost/ProjectManagment/
+- To open page go to http://localhost/ProjectManager/
 
 ## Demo
 

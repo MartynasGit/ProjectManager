@@ -12,7 +12,7 @@ if (isset($_POST['editProject']) && isset($_POST['project'])) {
         header('Location: ' . $_SERVER['PHP_SELF'] . '?' . 'path=Projects');
         die;
     } catch (EXCEPTION) {
-        $error = '<p class="text-danger">Error editing project</p>';
+        $_SESSION['error'] = 'edit-project';
     }
 }
 // EDIT EMPLOYEE LOGIC
@@ -29,7 +29,7 @@ if (isset($_POST['editEmployee']) && isset($_POST['employees'])) {
         header('Location: ' . $_SERVER['PHP_SELF'] . '?' . 'path=Employees');
         die;
     } catch (EXCEPTION) {
-        $error = '<p class="text-danger">Error editing employee</p>';
+        $_SESSION['error'] = 'edit-emplyee';
     }
 }
 // CREATE PROJECT LOGIC
