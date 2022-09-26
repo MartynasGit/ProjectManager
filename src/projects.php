@@ -14,8 +14,8 @@
                 echo '<tr> <td>' . $project['id'] . '</td>';
                 echo  '<td>' . $project['project_name'] . '</td>';
                 echo '<td>' . $project['employee'] . '</td>';
-                echo '<td><a href="/ProjectManager/?path=edit_project&id=' . $project['id'] . '" class="btn btn-primary me-2">' . '<i class="bi bi-pencil-square me-1"></i></a>';
-                echo '<a href="/ProjectManager/?path=delete_project&id=' . $project['id'] . '" class="btn btn-primary">' . '<i class="bi bi-trash3-fill me-1"></i></i></a></tr>';
+                echo '<td><a href="' . $_SERVER['PHP_SELF'] . '?path=edit_project&id=' . $project['id'] . '" class="btn btn-primary me-2">' . '<i class="bi bi-pencil-square me-1"></i></a>';
+                echo '<a href="' . $_SERVER['PHP_SELF'] . '?path=delete_project&id=' . $project['id'] . '" class="btn btn-primary">' . '<i class="bi bi-trash3-fill me-1"></i></i></a></tr>';
             }
         } else {
             echo '<h2>0 results</h2>';
@@ -25,7 +25,7 @@
 </table>
 <?php echo $error ?? ""; ?>
 <div class="col-3 mt-3">
-    <form action="/ProjectManager/?path=Projects" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF'] . '?path=Projects' ?>" method="post">
         <div class="form-group">
             <label for="name">Create new project</label>
             <input type="text" required id="name" placeholder="Name" name="project" class="form-control">

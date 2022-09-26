@@ -35,7 +35,7 @@ mysqli_close($conn);
         </ul>
     </div>
 
-    <form action="/ProjectManager/?path=Employees" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF'] . '?path=Employees' ?>" method="post">
         <div class="form-group">
             <label for="id">Employee's id</label>
             <input type="number" required id="id" placeholder="New id" name="idNew" class="form-control" value="<?php echo $employee['idx'] ?>">

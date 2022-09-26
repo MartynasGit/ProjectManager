@@ -4,6 +4,8 @@ if (isset($_SESSION['error'])) {
         $error = '<h5 class="text-danger">Error editing project: id already exist.</h5>';
     } else if ($_SESSION['error'] == 'edit-emplyee') {
         $error = '<h5 class="text-danger">Error editing emplyee: id already exist. </h5>';
+    } else if ($_SESSION['error'] == 'createProject') {
+        $error = '<h5 class="text-danger">Error creating project: name already exist. </h5>';
     }
     session_destroy();
 }

@@ -38,8 +38,8 @@ require_once('./src/errors.php');
         </div>
         <span style="width: 20%;" class="fs-2 me-2">Project Manager</span>
     </nav>
-    <div class="container-min-height">
-        <div class="content-wrap container">
+    <div>
+        <div class="content-wrap container container-min-height">
             <!-- RENDER TABLE OR DELETION -->
             <?php
             if (isset($_GET['path'])) {

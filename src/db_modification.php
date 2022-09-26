@@ -34,13 +34,17 @@ if (isset($_POST['editEmployee']) && isset($_POST['employees'])) {
 }
 // CREATE PROJECT LOGIC
 if (isset($_POST['createProject'])) {
-    $stmt = $conn->prepare("INSERT INTO projects (project_name) VALUES (?)");
-    $stmt->bind_param("s", $name);
-    $name = $_POST['project'];
-    $stmt->execute();
-    $stmt->close();
-    header('Location: ' . $_SERVER['PHP_SELF'] . '?' . 'path=Projects');
-    die;
+    try {
+        $stmt = $conn->prepare("INSERT INTO projects (project_name) VALUES (?)");
+        $stmt->bind_param("s", $name);
+        $name = $_POST['project'];
+        $stmt->execute();
+        $stmt->close();
+        header('Location: ' . $_SERVER['PHP_SELF'] . '?' . 'path=Projects');
+        die;
+    } catch (EXCEPTION) {
+        $_SESSION['error'] = 'createProject';
+    }
 }
 // CREATE EMPLOYEE LOGIC
 if (isset($_POST['createEmplyee'])) {
