@@ -62,7 +62,6 @@ require_once('./src/db_modification.php');
                 }
             } else
                 include('./src/projects.php');
-
             ?>
         </div>
         <!-- FOOTER -->

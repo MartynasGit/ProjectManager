@@ -40,7 +40,7 @@ CREATE TABLE `employees` (
 
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-INSERT INTO `employees` VALUES (1,'James Bond',1),(2,'Ricardo Milos',3),(3,'John Doe',4),(4,'LeBron James',2),(5,'Lorenzo Brown',NULL);
+INSERT INTO `employees` VALUES (1,'Walter White',1),(2,'John Snow',3),(3,'John Doe',4),(4,'Chuck Mcgill',2),(5,'Lorenzo Brown',NULL);
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 

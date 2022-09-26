@@ -20,6 +20,7 @@
         } else {
             echo '<h2>0 results</h2>';
         }
+         echo $error ?? "";
         ?>
     </tbody>
 </table>
