@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('./src/db_connection.php');
 require_once('./src/db_modification.php');
 require_once('./src/errors.php');
